@@ -2,22 +2,23 @@
 
 .infos-bar {
     padding: 16px 24px;
-    background-color: variables.$textColor;
+    background-image: linear-gradient(variables.$yellow2, variables.$yellow1);
     display: flex;
     justify-content: space-between;
 
     &__infos {
         display: flex;
         gap: 40px;
+        text-align: center;
 
         &__item {
             font-size: 14px;
-            color: variables.$secondaryTextColor;
+            color: variables.$textColor;
 
             b {
                 display: block;
                 font-size: 18px;
-                color: variables.$secondaryTextColor;
+                color: variables.$textColor;
             }
         }
     }
@@ -36,7 +37,12 @@
 
     @media (min-width: 641px) and (max-width: 1024px) {
         &__infos {
-            gap: 16px;
+            gap:12px;
+            text-align: left;
+
+            &__item {
+                max-width: 31%;
+            }
         }
     }
 }

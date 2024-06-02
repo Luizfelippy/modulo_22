@@ -1,53 +1,45 @@
 @use 'variables';
 
 .hero {
-    padding-top: 64px;
-    padding-bottom: 100px;
+    padding-top: 48px;
+    padding-bottom: 72px;
     background-image: url(../images/fundo.png);
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-
-    .container {
-        position: relative;
-    }
-
-    &::before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: variables.$secondaryTextColor;
-        content: "";
-        opacity: .7;
-    }
+    box-shadow: 0px 0px 50px variables.$secondaryTextColor;
 
     &__text {
-        margin: 64px 0;
-        font-size: 40px;
+        margin-top: 28px;
+        margin-bottom: 48px;
+        font-size: 46px;
         line-height: 56px;
         font-weight: 800;
         text-align: center;
+        background-clip: text;
+        background: linear-gradient(variables.$yellow1, variables.$yellow2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-emphasis-color: transparent;
     }
 
     &__logo {
         display: block;
         margin: 0 auto;
-        height: 80px;
+        height: 160px;
     }
 
     @media (max-width: 640px) {
-        padding: 40px 0;
-
+        padding: 20px 0;
+        background-position-x: -124vh;
+        
         &__logo {
-            height: 40px;
+            height: 90px;
         }
-
+        
         &__text {
             font-size: 22px;
             line-height: 24px;
-            margin: 24px 0;
+            margin: 24px 0;   
         }
     }
 }
