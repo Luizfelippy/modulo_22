@@ -10,7 +10,9 @@
 
     &--primary {
         color: variables.$textColor;
-        background-color: variables.$purple;
+        border-radius: 6px;
+        background-image: linear-gradient(variables.$yellow1, variables.$yellow2);
+        box-shadow: 0px 3px 10px variables.$secondaryTextColor;
     }
     
     @media (max-width: 640px) {
