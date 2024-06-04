@@ -8,6 +8,10 @@
     text-align: center;
     white-space: nowrap;
 
+    &:hover {
+        filter: brightness(1.1);
+    }
+
     &--primary {
         color: variables.$textColor;
         border-radius: 6px;
